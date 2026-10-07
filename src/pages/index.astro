@@ -1,0 +1,87 @@
+---
+import Base from "../layouts/Base.astro";
+import KleapForm from "@/components/KleapForm";
+---
+
+<Base title="Aman Verma — Personal Portfolio" description="A personal portfolio for Aman Verma, featuring selected engineering projects, creative experiments, and ways to connect.">
+  <main id="top" class="portfolio-shell">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="wordmark" href="#top">aman<span>.</span></a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="/cv">CV</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-status" href="#contact"><span></span> Available for ideas</a>
+    </nav>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-kicker"><span class="dot"></span> 01 / HELLO WORLD</div>
+      <div class="hero-copy">
+        <p class="eyebrow">Engineer × curious human</p>
+        <h1 id="hero-title">I build things<br /><em>worth exploring.</em></h1>
+        <p class="hero-intro">A personal collection of code, experiments, and small ideas made with patience, curiosity, and a little bit of chaos.</p>
+        <a class="arrow-link" href="#work">Explore selected work <span>↗</span></a>
+      </div>
+      <div class="hero-mark" aria-hidden="true">↘</div>
+      <div class="hero-index">SCROLL TO DISCOVER <span>↓</span></div>
+    </section>
+
+    <section id="work" class="work-section" aria-labelledby="work-title">
+      <div class="section-line"><span>02 / SELECTED WORK</span><span>Built with curiosity</span></div>
+      <div class="section-heading">
+        <h2 id="work-title">Projects with<br /><em>a point of view.</em></h2>
+        <p>Small, thoughtful builds that sit somewhere between engineering and expression.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-dark">
+          <div class="project-visual visual-morse" aria-hidden="true"><span>—　●　—　●</span><small>TRANSMIT / DECODE</small></div>
+          <div class="project-info"><span class="project-number">01 / SDMS PROJECT</span><h3>Morse Code<br />Encoder &amp; Decoder</h3><p>An interactive Tinkercad simulation that turns code into a tactile communication system.</p><div class="tags"><span>SDMS</span><span>Tinkercad</span><span>Simulation</span></div><a class="card-arrow" href="https://www.tinkercad.com/things/3kiSjncDMhH-morse-code-encoder-and-decoder" target="_blank" rel="noreferrer" aria-label="Open Morse Code Encoder and Decoder project">↗</a></div>
+        </article>
+        <article class="project-card project-lilac">
+          <div class="project-visual visual-signal" aria-hidden="true"><span>IEEE<br />INNOVATEX</span><small>TECHNOLOGY × COMMUNITY</small></div>
+          <div class="project-info"><span class="project-number">02 / IEEE INNOVATEX 2026</span><h3>IEEE<br />InnovateX 2026</h3><p>Designed and shipped a technology community website that gives an innovation event a clear digital home.</p><div class="tags"><span>Web design</span><span>Content structure</span><span>Figma</span></div><a class="card-arrow" href="https://cleave-slash-07397152.figma.site" target="_blank" rel="noreferrer" aria-label="Open IEEE InnovateX 2026 website">↗</a></div>
+        </article>
+        <article class="project-card project-green">
+          <div class="project-visual visual-grid" aria-hidden="true"><span>LEARN<br />BY<br />BUILDING.</span><small>FRONTEND × PRODUCT</small></div>
+          <div class="project-info"><span class="project-number">03 / FRONTEND PROJECT</span><h3>Interactive<br />Learning Lab</h3><p>Built a responsive browser experience that turns technical concepts into guided, interactive exercises.</p><div class="tags"><span>React</span><span>JavaScript</span><span>Responsive UI</span></div><a class="card-arrow" href="https://github.com/26el1am16-hub" target="_blank" rel="noreferrer" aria-label="View Aman Verma's frontend work on GitHub">↗</a></div>
+        </article>
+        <article class="project-card project-dark">
+          <div class="project-visual visual-morse" aria-hidden="true"><span>PLAN　→　BUILD　→　SHARE</span><small>OPEN SOURCE WORKFLOW</small></div>
+          <div class="project-info"><span class="project-number">04 / BUILD SYSTEM</span><h3>Prototype<br />Playbook</h3><p>Created a repeatable project workflow for taking an idea from first sketch to a documented, shareable prototype.</p><div class="tags"><span>GitHub</span><span>Documentation</span><span>Product thinking</span></div><a class="card-arrow" href="https://github.com/26el1am16-hub" target="_blank" rel="noreferrer" aria-label="View Aman Verma's project documentation on GitHub">↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about-section" aria-labelledby="about-title">
+      <div class="section-line"><span>03 / A LITTLE ABOUT ME</span><span>Always learning</span></div>
+      <div class="about-layout">
+        <h2 id="about-title">Thoughtful<br /><em>by default.</em></h2>
+        <div class="about-copy"><p>I’m interested in the space where technical systems meet real people. I like taking complicated ideas apart, finding the simple centre, and building from there.</p><p>When I’m not making something, I’m usually learning something new, asking better questions, or looking for a reason to turn an idea into a prototype.</p><a class="text-link" href="#contact">Say hello <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div class="section-line contact-line"><span>04 / SAY HELLO</span><span>Open to good conversations</span></div>
+      <div class="contact-layout">
+        <div><h2 id="contact-title">Have an idea?<br /><em>Let’s connect.</em></h2><p>Always open to a good conversation about technology, community, and what we can build next.</p><div class="contact-actions"><a class="text-link" href="/cv">Read my CV <span>↗</span></a><a class="text-link" href="https://github.com/26el1am16-hub" target="_blank" rel="noreferrer">Find me on GitHub <span>↗</span></a></div></div>
+        <div class="contact-form"><KleapForm client:load formId="contact" title="Start a conversation" fields={[{name:"name",label:"Name",type:"text",required:true},{name:"email",label:"Email",type:"email",required:true},{name:"message",label:"What are you thinking about?",type:"textarea",required:true}]} submitText="Send message ↗" /></div>
+      </div>
+    </section>
+
+    <footer class="site-footer"><a class="wordmark" href="#top">aman<span>.</span></a><p>Thoughtfully made. Always learning.</p><a href="#top">Back to top ↑</a><div class="footer-bottom"><span>© {new Date().getFullYear()} AMAN VERMA</span><span>BUILT WITH CURIOSITY.</span></div></footer>
+  </main>
+</Base>
+
+<style>
+  :global(html){scroll-behavior:smooth}:global(body){margin:0;background:#f5f4f0;color:#242126}:global(*){box-sizing:border-box}
+  .portfolio-shell{overflow:hidden}.site-nav,.hero,.work-section,.about-section,.contact-section,.site-footer{padding-left:clamp(1.25rem,6vw,6rem);padding-right:clamp(1.25rem,6vw,6rem)}
+  .site-nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d7d4d0;background:#f5f4f0}.wordmark{font:800 1.7rem/1 'Bricolage Grotesque',sans-serif;letter-spacing:-.08em;color:#242126;text-decoration:none}.wordmark span{color:#7358cf}.nav-links{display:flex;gap:2.2rem}.nav-links a,.nav-status,.hero-index,.section-line,.project-number,.tags,.footer-bottom{font:600 .67rem/1 'Figtree',sans-serif;letter-spacing:.13em;text-transform:uppercase}.nav-links a,.nav-status{color:#5f5b62;text-decoration:none}.nav-links a:hover,.nav-status:hover,.text-link:hover{color:#7358cf}.nav-status span,.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#7358cf;margin-right:7px}
+  .hero{min-height:calc(100vh - 78px);padding-top:clamp(4rem,11vh,9rem);padding-bottom:4rem;background:#242126;color:#f5f4f0;position:relative}.hero-kicker{font:600 .68rem/1 'Figtree',sans-serif;letter-spacing:.15em;color:#c6b9f4}.hero .dot{background:#c6b9f4}.hero-copy{max-width:900px;margin:clamp(4rem,12vh,9rem) auto 0}.eyebrow,.hero-intro,.section-heading p,.about-copy,.contact-layout p{font:400 clamp(1rem,1.5vw,1.25rem)/1.55 'Figtree',sans-serif;color:#847c88}.eyebrow{color:#c6b9f4;margin-bottom:1rem}.hero h1,.contact-section h2,.about-section h2,.section-heading h2{font:800 clamp(4.3rem,10vw,10rem)/.83 'Bricolage Grotesque',sans-serif;letter-spacing:-.09em;margin:0}.hero h1 em,.contact-section h2 em,.about-section h2 em,.section-heading h2 em{font-family:Georgia,serif;font-weight:400;font-style:italic;letter-spacing:-.1em;color:#c6b9f4}.hero-intro{max-width:480px;margin:2.4rem 0;color:#b0a9b4}.arrow-link,.text-link{display:inline-flex;align-items:center;gap:2rem;padding:1rem 1.2rem;background:#c6b9f4;color:#242126;text-decoration:none;font:700 .8rem 'Figtree',sans-serif}.arrow-link span,.text-link span{font-size:1.2rem}.hero-mark{position:absolute;right:8%;top:43%;font-size:clamp(4rem,10vw,10rem);color:#7358cf;transform:rotate(-20deg)}.hero-index{position:absolute;bottom:2rem;right:6%;color:#847c88}.hero-index span{color:#c6b9f4;font-size:1.2rem;margin-left:.5rem}
+  .work-section{padding-top:7rem;padding-bottom:8rem}.section-line{display:flex;justify-content:space-between;padding-bottom:1rem;border-bottom:1px solid #cbc7c8;color:#847d87}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:3rem;padding:5rem 0 4rem}.section-heading h2,.about-section h2{font-size:clamp(3.4rem,7vw,7rem)}.section-heading h2 em,.about-section h2 em{color:#7358cf}.section-heading p{max-width:270px;margin:0;color:#6e6971}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.project-card{min-height:530px;border:1px solid #d7d4d0;background:#fff;display:flex;flex-direction:column}.project-visual{height:250px;padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;font:700 .72rem 'Figtree',sans-serif;letter-spacing:.13em}.project-visual small{font-size:.62rem;opacity:.7}.visual-morse{background:#2e2b56;color:#ded8ff;justify-content:center;align-items:center;gap:4.5rem;font-size:1.5rem}.visual-signal{background:#d8cef9;color:#5d43b7}.visual-signal span{font:800 2.7rem 'Bricolage Grotesque',sans-serif;letter-spacing:-.1em}.visual-grid{background:#1f4438;color:#d5e1ba;background-image:linear-gradient(#ffffff12 1px,transparent 1px),linear-gradient(90deg,#ffffff12 1px,transparent 1px);background-size:32px 32px}.visual-grid span{font:800 2.2rem/.8 'Bricolage Grotesque',sans-serif;letter-spacing:-.08em}.project-info{padding:1.5rem;flex:1;position:relative}.project-number{color:#817b87}.project-info h3{font:700 clamp(1.8rem,3vw,2.7rem)/.95 'Bricolage Grotesque',sans-serif;letter-spacing:-.07em;margin:3.4rem 0 1rem}.project-info p{font:400 1rem/1.5 'Figtree',sans-serif;color:#716b74;max-width:280px}.tags{display:flex;flex-wrap:wrap;gap:.45rem;position:absolute;bottom:1.5rem;left:1.5rem;right:4rem}.tags span{border:1px solid #d4d0d1;padding:.55rem .65rem;letter-spacing:.06em;text-transform:none;font-weight:500}.card-arrow{position:absolute;right:1.5rem;bottom:1.35rem;width:2.8rem;height:2.8rem;border:1px solid #cbc7c8;display:grid;place-items:center;color:#242126;text-decoration:none;font-size:1.35rem}.card-arrow:hover{background:#242126;color:#fff}
+  .about-section{padding-top:7rem;padding-bottom:9rem;background:#fff}.about-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:8vw;padding-top:6rem}.about-copy{max-width:450px;padding-top:1rem}.about-copy p{margin:0 0 1.4rem;color:#6f6973}.text-link{background:#242126;color:#fff;margin-top:1rem}.contact-section{padding-top:6rem;padding-bottom:7rem;background:#d9d0fb}.contact-line{border-color:#bdb2e5;color:#665a89}.contact-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:8vw;padding-top:6rem;align-items:start}.contact-section h2{font-size:clamp(4rem,8vw,8rem);color:#242126}.contact-section h2 em{color:#7358cf}.contact-layout p{max-width:480px;color:#615b78;margin-top:2.5rem}.contact-form{background:#f5f4f0;padding:1.5rem;color:#242126}.site-footer{background:#242126;color:#f5f4f0;padding-top:5rem;padding-bottom:1.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;align-items:start}.site-footer .wordmark{color:#f5f4f0}.site-footer p,.site-footer>a:not(.wordmark){font:400 .9rem 'Figtree',sans-serif;color:#b0a9b4;text-decoration:none}.site-footer>a:last-of-type{text-align:right}.footer-bottom{grid-column:1/-1;border-top:1px solid #514d54;padding-top:1rem;margin-top:3rem;color:#8c858e;display:flex;justify-content:space-between;font-size:.6rem}
+  @media(max-width:800px){.nav-links{display:none}.nav-status{font-size:.58rem}.hero{min-height:680px}.hero-copy{margin-top:6rem}.hero-mark{top:auto;bottom:6rem;right:9%}.section-heading,.about-layout,.contact-layout{display:block}.section-heading p{margin-top:2rem}.project-grid{grid-template-columns:1fr}.project-card{min-height:500px}.about-copy{padding-top:2.5rem}.contact-form{margin-top:3rem}.site-footer{grid-template-columns:1fr}.site-footer>a:last-of-type{text-align:left}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:.7rem}}
+  @media(prefers-reduced-motion:no-preference){.hero-copy,.hero-kicker{animation:rise .8s both}.hero-copy{animation-delay:.12s}.project-card{transition:transform .3s ease}.project-card:hover{transform:translateY(-8px)}@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}}
+</style>

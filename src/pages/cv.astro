@@ -1,0 +1,37 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Aman Verma — CV" description="Aman Verma's experience, education, skills, achievements, and selected technical work.">
+  <main class="cv-page">
+    <nav class="cv-nav" aria-label="CV navigation">
+      <a class="wordmark" href="/">aman<span>.</span></a>
+      <a href="/">Back to portfolio ↗</a>
+    </nav>
+    <header class="cv-hero">
+      <p class="eyebrow">Curriculum vitae / 2026</p>
+      <h1>Aman Verma</h1>
+      <p class="cv-summary">Engineer and builder focused on thoughtful digital experiences, practical systems, and the space where technology meets people.</p>
+      <a class="download-link" href="/aman-verma-cv.html" download>Download CV <span>↓</span></a>
+    </header>
+    <div class="cv-grid">
+      <section aria-labelledby="experience-title">
+        <p class="section-label">01 / Experience</p>
+        <h2 id="experience-title">Building with intent.</h2>
+        <article class="cv-entry"><div><h3>Independent Developer</h3><p class="meta">Personal practice · 2024 — Present</p></div><p>Designs and builds responsive web experiences from first idea through working prototype, with an emphasis on clarity, accessible interaction, and useful outcomes.</p></article>
+        <article class="cv-entry"><div><h3>IEEE InnovateX 2026</h3><p class="meta">Web design and community platform · 2026</p></div><p>Shaped the information structure and visual direction for a technology and innovation community website, turning a broad event brief into a focused online experience.</p></article>
+        <article class="cv-entry"><div><h3>Technical Project Builder</h3><p class="meta">Academic and independent projects · 2023 — Present</p></div><p>Creates hands-on projects including a Morse Code Encoder and Decoder simulation, interactive frontend concepts, and documented prototype workflows.</p></article>
+      </section>
+      <aside class="cv-aside">
+        <section aria-labelledby="skills-title"><p class="section-label">02 / Skills</p><h2 id="skills-title">Tools I use.</h2><ul class="skill-list"><li>JavaScript</li><li>React</li><li>HTML &amp; CSS</li><li>Responsive design</li><li>GitHub &amp; Git</li><li>Figma</li><li>Tinkercad</li><li>Technical writing</li></ul></section>
+        <section aria-labelledby="education-title"><p class="section-label">03 / Education</p><h2 id="education-title">Learning in public.</h2><article class="cv-entry compact"><h3>Computer Science and Engineering</h3><p class="meta">Academic studies · In progress</p><p>Developing a foundation across programming, systems thinking, digital design, and collaborative technology projects.</p></article></section>
+      </aside>
+    </div>
+    <section class="achievement-section" aria-labelledby="achievement-title"><p class="section-label">04 / Achievements</p><h2 id="achievement-title">Proof in the work.</h2><div class="achievement-grid"><article><strong>01</strong><h3>IEEE InnovateX 2026</h3><p>Delivered a technology community website concept with a clear path from idea to public-facing experience.</p></article><article><strong>02</strong><h3>Morse Code Encoder &amp; Decoder</h3><p>Built an interactive communication simulation in Tinkercad to make encoding and decoding tangible.</p></article><article><strong>03</strong><h3>Project-led practice</h3><p>Maintains a growing body of technical work that connects engineering decisions with human use.</p></article></div></section>
+    <footer class="cv-footer"><a class="wordmark" href="/">aman<span>.</span></a><a href="/">Return to selected work ↗</a><span>© {new Date().getFullYear()} AMAN VERMA</span></footer>
+  </main>
+</Base>
+
+<style>
+  :global(body){margin:0;background:#f5f4f0;color:#242126;font-family:'Figtree',sans-serif}.cv-page{max-width:1280px;margin:0 auto;padding:0 clamp(1.25rem,6vw,6rem)}.cv-nav{height:78px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d7d4d0}.wordmark{font:800 1.7rem/1 'Bricolage Grotesque',sans-serif;letter-spacing:-.08em;color:#242126;text-decoration:none}.wordmark span{color:#7358cf}.cv-nav>a:last-child,.cv-footer a:last-child{color:#5f5b62;text-decoration:none;font-size:.75rem;text-transform:uppercase;letter-spacing:.12em}.cv-hero{padding:clamp(5rem,12vw,10rem) 0 7rem;max-width:900px}.eyebrow,.section-label,.meta{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7358cf}.cv-hero h1{font:800 clamp(5rem,14vw,12rem)/.82 'Bricolage Grotesque',sans-serif;letter-spacing:-.1em;margin:1.5rem 0}.cv-summary{max-width:590px;font-size:clamp(1.15rem,2vw,1.6rem);line-height:1.45;color:#6e6971}.download-link{display:inline-flex;gap:2rem;margin-top:2rem;padding:1rem 1.2rem;background:#242126;color:#fff;text-decoration:none;font-weight:700}.cv-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:8vw;border-top:1px solid #cbc7c8;padding:5rem 0 8rem}.cv-grid h2,.achievement-section h2{font:700 clamp(2.8rem,5vw,5.5rem)/.9 'Bricolage Grotesque',sans-serif;letter-spacing:-.08em;margin:1.5rem 0 4rem}.cv-entry{display:grid;grid-template-columns:.8fr 1.2fr;gap:2rem;padding:2rem 0;border-top:1px solid #d7d4d0}.cv-entry h3,.achievement-grid h3{font:700 1.35rem/1 'Bricolage Grotesque',sans-serif;letter-spacing:-.04em;margin:0}.cv-entry p{margin:0;color:#6e6971;line-height:1.55}.cv-entry .meta{margin-top:.7rem;color:#817b87;font-size:.6rem}.cv-aside{background:#d9d0fb;padding:2rem}.skill-list{list-style:none;padding:0;margin:0 0 6rem;display:grid;grid-template-columns:1fr 1fr;gap:.75rem;color:#5c4c86}.skill-list li{border-bottom:1px solid #bdb2e5;padding-bottom:.65rem}.cv-entry.compact{display:block;border:0;padding:0}.cv-entry.compact p{margin-top:1rem}.achievement-section{padding:0 0 8rem}.achievement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.achievement-grid article{padding:1.5rem;background:#242126;color:#f5f4f0;min-height:220px}.achievement-grid strong{color:#c6b9f4}.achievement-grid h3{margin:3rem 0 1rem}.achievement-grid p{color:#b0a9b4;line-height:1.5}.cv-footer{border-top:1px solid #514d54;background:#242126;color:#f5f4f0;margin:0 calc(clamp(1.25rem,6vw,6rem) * -1);padding:3rem clamp(1.25rem,6vw,6rem) 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem}.cv-footer .wordmark{color:#f5f4f0}.cv-footer span{grid-column:1/-1;border-top:1px solid #514d54;padding-top:1rem;color:#8c858e;font-size:.65rem;letter-spacing:.12em}@media(max-width:800px){.cv-grid,.cv-entry,.achievement-grid{display:block}.cv-entry{margin-top:2rem}.cv-aside{margin-top:4rem}.achievement-grid article{margin-top:1rem}.cv-footer{grid-template-columns:1fr}.cv-footer span{grid-column:auto}}
+</style>
